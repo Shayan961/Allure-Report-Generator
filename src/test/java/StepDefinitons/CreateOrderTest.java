@@ -47,13 +47,18 @@ public class CreateOrderTest extends BaseClass {
 
     @Given("I am on create order page")
     public void i_am_on_create_order_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
+        String expectedUrl = "https://vllenderspr1.spurams.com/AddAppraisal.aspx";
+        String actualUrl = driver.getCurrentUrl();
+
+        Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
+
+
     }
     @When("user enter client")
     public void user_enter_client() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @When("user enter transaction type")
     public void user_enter_transaction_type() {
@@ -62,8 +67,7 @@ public class CreateOrderTest extends BaseClass {
     }
     @When("user enter address")
     public void user_enter_address() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @When("user enter product")
     public void user_enter_product() {
