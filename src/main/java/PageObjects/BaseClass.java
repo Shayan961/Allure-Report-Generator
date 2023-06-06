@@ -9,13 +9,10 @@ public class BaseClass {
     public static WebDriver driver;
 
     public static void setDriver(){
-        System.setProperty("webdriver.chrome.driver", "E:\\Project\\Allure\\chromedriver.exe");
-        //System.setProperty("webdriver.chrome.driver","C:\Users\Lenovo\Documents\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Spursol-Shayan\\Documents\\WebDriver\\chromedriver.exe");
+
         driver = new ChromeDriver();
-        driver.get("http://18.188.38.38/login");
+        driver.get("https://vllenderspr1.spurams.com/");
     }
-
-
-
 
 }
