@@ -43,4 +43,38 @@ public class CreateOrderTest extends BaseClass {
 
         Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
     }
+
+
+    @Given("I am on create order page")
+    public void i_am_on_create_order_page() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user enter client")
+    public void user_enter_client() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user enter transaction type")
+    public void user_enter_transaction_type() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user enter address")
+    public void user_enter_address() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user enter product")
+    public void user_enter_product() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user click on continue button")
+    public void user_click_on_continue_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+
 }

@@ -22,4 +22,14 @@ Feature: Create Order
 
 
   Scenario:  Create New Order
-    Given I A hello worldfgfg
+    Given I am on create order page
+
+    When  user enter client
+
+    When user enter transaction type
+
+    When user enter address
+
+    When user enter product
+
+    When user click on continue button
