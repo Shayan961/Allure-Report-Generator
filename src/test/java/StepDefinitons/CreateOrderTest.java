@@ -45,28 +45,33 @@ public class CreateOrderTest extends BaseClass {
     }
 
 
-    @Given("I am on create order page")
-    public void i_am_on_create_order_page() {
-
-
-        String expectedUrl = "https://vllenderspr1.spurams.com/AddAppraisal.aspx";
-        String actualUrl = driver.getCurrentUrl();
-
-        Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
-
-
-    }
+//    @Given("I am on create order page")
+//    public void i_am_on_create_order_page() {
+//
+//
+//        String expectedUrl = "https://vllenderspr1.spurams.com/AddAppraisal.aspx";
+//        String actualUrl = driver.getCurrentUrl();
+//
+//        Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
+//
+//
+//    }
     @When("user enter client")
     public void user_enter_client() {
+
+        CreateOrderObject.enter_client_name("AB Client");
 
     }
     @When("user enter transaction type")
     public void user_enter_transaction_type() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        CreateOrderObject.enter_transaction("Acquisition");
+
     }
     @When("user enter address")
     public void user_enter_address() {
+        CreateOrderObject.property_address("CONDO","1 Infinite Loop","California","95014","Cupertino");
+
 
     }
     @When("user enter product")

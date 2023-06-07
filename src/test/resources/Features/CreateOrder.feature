@@ -20,10 +20,6 @@ Feature: Create Order
 
     Then  I should be redirected to the create order page
 
-
-  Scenario:  Create New Order
-    Given I am on create order page
-
     When  user enter client
 
     When user enter transaction type

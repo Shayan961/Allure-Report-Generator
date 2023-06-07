@@ -10,7 +10,7 @@ public class CreateOrderObject extends BaseClass{
     public static String createneworder_btn = "#ctl00_cphBody_divCreateOrderDD > button";
     public static String optionappraisal = "#ctl00_cphBody_ddCreateOrder > li:nth-child(2) > a";
 
-    public static String clientfield = "#ctl00_cphBody_drpLender";
+    public static String clientfield = "ctl00_cphBody_drpLender";
 
     public static String Transaction = "ctl00_cphBody_drpTransactionType";
 
@@ -44,9 +44,14 @@ public class CreateOrderObject extends BaseClass{
         driver.findElement(By.cssSelector(optionappraisal)).click();
     }
 
-    public static void enter_client_name(String clientname)
+    public static void enter_client_name(String client)
     {
-        driver.findElement(By.id(clientfield)).sendKeys(clientname);
+//        WebElement dropdown_client=driver.findElement(By.id(clientfield));
+//        Select dropdown = new Select(dropdown_client);
+//        dropdown.selectByIndex(4);
+        driver.findElement(By.id(clientfield)).sendKeys(client);
+
+
     }
 
 
@@ -61,6 +66,15 @@ public class CreateOrderObject extends BaseClass{
         WebElement dropdownElement =driver.findElement(By.id(Property_Type));
         Select dropdown = new Select(dropdownElement);
         dropdown.selectByValue("32");
+
+        driver.findElement(By.id(Property_Address)).sendKeys(PAddress);
+
+
+        driver.findElement(By.id(Property_State)).sendKeys(PState);
+        driver.findElement(By.id(Property_Zip)).sendKeys(Pzip);
+        driver.findElement(By.id(Property_City)).sendKeys(Pcity);
+
+
 
 
 
