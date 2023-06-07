@@ -14,7 +14,9 @@ Feature: Create Order
 
 
   Scenario: Move to Create Order Page
+
     Given I am on create order dropdown
+
 
     When  I select appraisal option
 
@@ -28,4 +30,22 @@ Feature: Create Order
 
     When user enter product
 
+    When user check supporting doc radio button
+
     When user click on continue button
+
+    When user click on confirm button
+
+
+
+#  Scenario: Move to submit report
+#    Given user is on View appraisal
+#    When user click on action button
+#
+#    When user select submit submit appraisal report
+#
+#    When user should be redirected to the SubmitAppraisal page
+#
+#    When user click on choose file button
+#
+#    When user click on submit report button

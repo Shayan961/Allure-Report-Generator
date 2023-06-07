@@ -5,7 +5,7 @@ import io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"C:\\AutomationGithub\\CrossCheck_Automation_Selenium_Cucumber\\src\\test\\resources\\Features\\CreateOrder.feature"},
+        features = {"D:\\repo\\CucumberWithPom_CC_Final\\src\\test\\resources\\Features"},
         //glue = {"com.example.steps"},
         plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"})
 public class TestRunner {

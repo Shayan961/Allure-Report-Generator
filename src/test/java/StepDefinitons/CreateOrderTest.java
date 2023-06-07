@@ -38,24 +38,11 @@ public class CreateOrderTest extends BaseClass {
     public void I_should_be_redirected_to_the_create_order_page()
     {
         //sleep(9000);
-        String expectedUrl = "https://vllenderspr1.spurams.com/AddAppraisal.aspx";
+        String expectedUrl = BaseClass.BaseURL + "/AddAppraisal.aspx";
         String actualUrl = driver.getCurrentUrl();
-
         Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
     }
 
-
-//    @Given("I am on create order page")
-//    public void i_am_on_create_order_page() {
-//
-//
-//        String expectedUrl = "https://vllenderspr1.spurams.com/AddAppraisal.aspx";
-//        String actualUrl = driver.getCurrentUrl();
-//
-//        Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
-//
-//
-//    }
     @When("user enter client")
     public void user_enter_client() {
 
@@ -64,7 +51,7 @@ public class CreateOrderTest extends BaseClass {
     }
     @When("user enter transaction type")
     public void user_enter_transaction_type() {
-        // Write code here that turns the phrase above into concrete actions
+
         CreateOrderObject.enter_transaction("Acquisition");
 
     }
@@ -72,18 +59,64 @@ public class CreateOrderTest extends BaseClass {
     public void user_enter_address() {
         CreateOrderObject.property_address("CONDO","1 Infinite Loop","California","95014","Cupertino");
 
-
     }
     @When("user enter product")
     public void user_enter_product() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        CreateOrderObject.user_enter_product(2);
+    }
+    @When("user check supporting doc radio button")
+    public void user_check_supporting_doc_radio_button() {
+        CreateOrderObject.check_supportingdoc_btn();
+
     }
     @When("user click on continue button")
-    public void user_click_on_continue_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_click_on_continue_button()
+    {
+        CreateOrderObject.click_continue_btn();
+    }
+    @When("user click on confirm button")
+    public void user_click_on_confirm_button()
+    {
+        CreateOrderObject.confirm_btn();
+    }
+
+    @Then("Order should be created successfully")
+    public void Order_should_be_created_successfully()
+    {
+        String expectedText = BaseClass.BaseURL + "/ViewAppraisal.aspx";
+        String CurrentURL = driver.getCurrentUrl();
+        Assert.assertTrue(CurrentURL.contains(expectedText));
     }
 
 
+    @When("user click on action button")
+    public void user_click_on_action_button()
+    {
+
+    }
+
+    @When("user select submit submit appraisal report")
+    public void user_select_submit_submit_appraisal_report()
+    {
+
+    }
+
+    @When("user should be redirected to the SubmitAppraisal page")
+    public void user_should_be_redirected_to_the_submit_appraisal_page()
+    {
+
+    }
+
+    @When("user click on choose file button")
+    public void user_click_on_choose_file_button()
+    {
+
+    }
+
+    @When("user click on submit report button")
+    public void user_click_on_submit_report_button()
+    {
+
+    }
 }
+

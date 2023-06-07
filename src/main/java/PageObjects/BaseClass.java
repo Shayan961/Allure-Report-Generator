@@ -9,14 +9,14 @@ public class BaseClass {
 
 
     public static WebDriver driver;
-
+    public static String BaseURL = "https://vllenderspr1.spurams.com";
     public static void setDriver(){
 
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Spursol-Shayan\\Documents\\WebDriver\\chromedriver.exe");
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://vllenderspr1.spurams.com/");
+        driver.get(BaseURL);
 
 
 
