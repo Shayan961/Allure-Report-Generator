@@ -67,7 +67,7 @@ public class LoginTest extends BaseClass {
     @Description("verify URL")
     @Test
     public void I_should_be_redirected_to_the_dashboard() {
-        String expectedUrl = "https://vllenderspr1.spurams.com/AdminDashboard.aspx";
+        String expectedUrl = BaseClass.BaseURL + "/AdminDashboard.aspx";
         String actualUrl = driver.getCurrentUrl();
 
         Assert.assertEquals("Expected URL doesn't match the actual URL", expectedUrl, actualUrl);
@@ -89,7 +89,6 @@ public class LoginTest extends BaseClass {
     public void I_should_see_an_error_message() {
         String expectedErrorMessage = "Your login attempt was not successful. Please try again."; // Update with your expected error message
         String actualErrorMessage = driver.findElement(By.cssSelector("#ctl00_cphBody_Login1 > tbody > tr > td > table > tbody > tr:nth-child(5) > td")).getText(); // Update with the correct selector for your error message element
-
         Assert.assertEquals("Expected error message doesn't match the actual error message", expectedErrorMessage, actualErrorMessage);
     }
 
