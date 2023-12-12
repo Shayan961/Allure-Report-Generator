@@ -1,3 +1,4 @@
+@FirstFeature
 Feature: Login feature
 
 
